@@ -1,14 +1,14 @@
 public class Item {
-    private String itemName;
+    private String Name;
     private int itemCode;
 
-    public Item(String name, int code){
-        itemName = name;
-        itemCode = code;
+    public Item(String n, int c){
+        Name = n;
+        itemCode = c;
     }
     public void display(){
-        System.out.println("The product name is: "+itemName);
-        System.out.println("The product code is: "+itemCode);
+        System.out.println("Product name: "+Name);
+        System.out.println("Product code: "+itemCode);
     }
 
     interface Discount{
