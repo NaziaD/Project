@@ -11,4 +11,12 @@ public class Item {
         System.out.println("The product code is: "+itemCode);
     }
 
+    interface Discount{
+        public double computeDiscount();
+    }
+
+    interface Tax{
+        public double computeTax();
+    }
+
 }
