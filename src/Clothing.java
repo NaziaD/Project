@@ -19,12 +19,12 @@ public class Clothing extends Item implements Item.Discount, Item.Tax {
     }
 
     public double computeTax() {
-        double tax = (taxpercent/100)*(price*units);
+        double tax = (taxpercent/100 *((price*units)-computeDiscount()));
         return tax;
     }
 
     public double computeTotalPrice() {
-        double total = (price*units)-computeDiscount()+computeTax();
+        double total = (((price * units) - computeDiscount()) + computeTax());
         return total;
     }
 
@@ -33,9 +33,10 @@ public class Clothing extends Item implements Item.Discount, Item.Tax {
         System.out.println("Brand: "+brand);
         System.out.println("Price: "+price);
         System.out.println("Units: "+units);
-        System.out.println("Subtotal: "+ ((price*units)-computeDiscount()));
+        System.out.println("Subtotal: "+ (price*units));
         System.out.println("Savings: "+computeDiscount());
         System.out.println("Tax amount: "+computeTax());
         System.out.println("Final price: "+computeTotalPrice());
+        System.out.println(" ");
     }
 }
