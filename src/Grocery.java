@@ -2,7 +2,8 @@ public class Grocery extends Item implements Item.Discount, Item.Tax {
     private double price;
     private double units;
     private double discountpercent;
-    final double taxpercent = 0.0;
+    private final double taxpercent = 0.0;
+
     Grocery(String n, int c, double p, double u, double d) {
         super(n, c);
         price = p;

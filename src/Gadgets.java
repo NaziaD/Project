@@ -1,11 +1,11 @@
-public class Clothing extends Item implements Item.Discount, Item.Tax {
+public class Gadgets extends Item implements Item.Tax, Item.Discount {
     private String brand;
     private double price;
     private double units;
     private double discountpercent;
     private final double taxpercent = 8.5;
 
-    Clothing(String n, String b, int c, int p, int u, int d) {
+    Gadgets(String n, String b, int c, int p, int u, int d) {
         super(n, c);
         brand = b;
         price = p;
@@ -28,7 +28,7 @@ public class Clothing extends Item implements Item.Discount, Item.Tax {
         return total;
     }
 
-    public void displayClothing() {
+    public void displayGadgets() {
         display();
         System.out.println("Brand: "+brand);
         System.out.println("Price: "+price);
